@@ -1,0 +1,194 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bgWelcome" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#060c18"/>
+      <stop offset="50%" style="stop-color:#0a1528"/>
+      <stop offset="100%" style="stop-color:#0d1a2e"/>
+    </linearGradient>
+
+    <!-- Emerald gradient -->
+    <linearGradient id="emW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10d9a0"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+
+    <!-- Gold gradient -->
+    <linearGradient id="goW" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+
+    <!-- Radial glow center-right -->
+    <radialGradient id="glowRight" cx="75%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#10d9a0;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#10d9a0;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Radial glow bottom-left gold -->
+    <radialGradient id="glowLeft" cx="10%" cy="90%" r="40%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.10"/>
+      <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Glow filter for icon -->
+    <filter id="glowW" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Text glow -->
+    <filter id="textGlow" x="-10%" y="-20%" width="120%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base background -->
+  <rect width="1200" height="630" fill="url(#bgWelcome)"/>
+
+  <!-- Ambient glows -->
+  <rect width="1200" height="630" fill="url(#glowRight)"/>
+  <rect width="1200" height="630" fill="url(#glowLeft)"/>
+
+  <!-- === GRID LINES (subtle) === -->
+  <g opacity="0.035" stroke="#10d9a0" stroke-width="1">
+    <!-- Horizontal -->
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <!-- Vertical -->
+    <line x1="150" y1="0" x2="150" y2="630"/>
+    <line x1="300" y1="0" x2="300" y2="630"/>
+    <line x1="450" y1="0" x2="450" y2="630"/>
+    <line x1="600" y1="0" x2="600" y2="630"/>
+    <line x1="750" y1="0" x2="750" y2="630"/>
+    <line x1="900" y1="0" x2="900" y2="630"/>
+    <line x1="1050" y1="0" x2="1050" y2="630"/>
+  </g>
+
+  <!-- === DECORATIVE: Lane lines (right side) === -->
+  <!-- Diagonal lane streaks suggesting speed/path -->
+  <g opacity="0.08">
+    <line x1="820" y1="0" x2="1200" y2="630" stroke="#10d9a0" stroke-width="60"/>
+  </g>
+  <g opacity="0.05">
+    <line x1="920" y1="0" x2="1200" y2="378" stroke="#10d9a0" stroke-width="30"/>
+  </g>
+  <g opacity="0.04">
+    <line x1="1050" y1="0" x2="1200" y2="189" stroke="#fbbf24" stroke-width="20"/>
+  </g>
+
+  <!-- === ICON (large, right side) === -->
+  <!-- Outer hexagon -->
+  <polygon points="960,140 1060,198 1060,314 960,372 860,314 860,198"
+    fill="none" stroke="url(#emW)" stroke-width="3" opacity="0.35"/>
+
+  <!-- Inner hexagon -->
+  <polygon points="960,178 1030,218 1030,298 960,338 890,298 890,218"
+    fill="none" stroke="url(#emW)" stroke-width="1.5" opacity="0.2"/>
+
+  <!-- A mark — left leg -->
+  <path d="M908,340 L960,200 L960,200" stroke="url(#emW)" stroke-width="16" stroke-linecap="round" fill="none" filter="url(#glowW)"/>
+  <!-- A mark — right leg -->
+  <path d="M960,200 L1012,340" stroke="url(#emW)" stroke-width="16" stroke-linecap="round" fill="none" filter="url(#glowW)"/>
+  <!-- Gold crossbar -->
+  <line x1="928" y1="306" x2="992" y2="306" stroke="url(#goW)" stroke-width="12" stroke-linecap="round" filter="url(#glowW)"/>
+  <!-- Gold apex dot -->
+  <circle cx="960" cy="200" r="10" fill="url(#goW)" filter="url(#glowW)"/>
+
+  <!-- Arrow under icon: the "lane" concept -->
+  <path d="M910,366 L1010,366 L990,350 M1010,366 L990,382"
+    stroke="url(#emW)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.7"/>
+
+  <!-- === LEFT SIDE TEXT === -->
+
+  <!-- "ARCTURA" wordmark -->
+  <text
+    x="80"
+    y="268"
+    font-family="'Trebuchet MS', 'Arial Narrow', Arial, sans-serif"
+    font-size="118"
+    font-weight="900"
+    letter-spacing="10"
+    fill="#f0fdf4"
+    filter="url(#textGlow)"
+  >ARCTURA</text>
+
+  <!-- "PAY" in gold -->
+  <text
+    x="80"
+    y="346"
+    font-family="'Trebuchet MS', 'Arial Narrow', Arial, sans-serif"
+    font-size="68"
+    font-weight="700"
+    letter-spacing="28"
+    fill="url(#goW)"
+    filter="url(#textGlow)"
+  >PAY</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="375" x2="600" y2="375" stroke="#10d9a0" stroke-width="2" opacity="0.4"/>
+
+  <!-- Tagline -->
+  <text
+    x="80"
+    y="410"
+    font-family="'Trebuchet MS', Arial, sans-serif"
+    font-size="26"
+    font-weight="400"
+    letter-spacing="5"
+    fill="#6b7280"
+  >YOUR EARNING PATH</text>
+
+  <!-- Feature pills row -->
+  <!-- Pill 1: Watch & Earn -->
+  <rect x="80" y="450" width="148" height="36" rx="18" fill="#10d9a0" fill-opacity="0.12" stroke="#10d9a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="154" y="473" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0.5" fill="#10d9a0">Watch &amp; Earn</text>
+
+  <!-- Pill 2: Surveys -->
+  <rect x="242" y="450" width="110" height="36" rx="18" fill="#10d9a0" fill-opacity="0.12" stroke="#10d9a0" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="297" y="473" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0.5" fill="#10d9a0">Surveys</text>
+
+  <!-- Pill 3: Daily Vault -->
+  <rect x="366" y="450" width="124" height="36" rx="18" fill="#fbbf24" fill-opacity="0.12" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="428" y="473" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0.5" fill="#fbbf24">Daily Vault</text>
+
+  <!-- Pill 4: Instant Withdraw -->
+  <rect x="504" y="450" width="168" height="36" rx="18" fill="#fbbf24" fill-opacity="0.12" stroke="#fbbf24" stroke-width="1" stroke-opacity="0.4"/>
+  <text x="588" y="473" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="600" letter-spacing="0.5" fill="#fbbf24">Instant Withdraw</text>
+
+  <!-- Bottom: Telegram badge -->
+  <text x="80" y="565"
+    font-family="Arial, sans-serif"
+    font-size="18"
+    fill="#374151"
+    letter-spacing="1"
+  >▶  Telegram Mini App</text>
+
+  <!-- TON · USDT · Wise · Payoneer -->
+  <text x="80" y="598"
+    font-family="Arial, sans-serif"
+    font-size="16"
+    fill="#374151"
+    letter-spacing="1"
+  >TON  ·  USDT  ·  Wise  ·  Payoneer</text>
+
+  <!-- Corner brand mark bottom-right -->
+  <text x="1120" y="610"
+    text-anchor="end"
+    font-family="Arial, sans-serif"
+    font-size="14"
+    fill="#1f2937"
+    letter-spacing="1"
+  >arctura.pay</text>
+
+</svg>
