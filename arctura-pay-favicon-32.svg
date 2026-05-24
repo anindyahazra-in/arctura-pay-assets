@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bgF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0f1a"/>
+      <stop offset="100%" style="stop-color:#0d1a2e"/>
+    </linearGradient>
+    <linearGradient id="emF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10d9a0"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="goF" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect width="32" height="32" rx="7" fill="url(#bgF)"/>
+
+  <!-- Emerald left leg of A -->
+  <path d="M10,24 L16,8" stroke="url(#emF)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  <!-- Emerald right leg of A -->
+  <path d="M16,8 L22,24" stroke="url(#emF)" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+  <!-- Gold crossbar -->
+  <line x1="12.5" y1="19" x2="19.5" y2="19" stroke="url(#goF)" stroke-width="2.2" stroke-linecap="round"/>
+  <!-- Gold apex dot -->
+  <circle cx="16" cy="8" r="2" fill="url(#goF)"/>
+
+</svg>
